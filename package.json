@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm start",
+    "start:dev": "NODE_ENV=development babel-node ./src/server/index.js",
     "test": "./node_modules/.bin/mocha --harmony --require babel-register",
     "build:server": "./node_modules/.bin/webpack --config webpack.server.config.js --mode development",
     "clean:build": "echo \"Cleaning up build files.\n\" && rm server.js && echo \"Done\n\"",

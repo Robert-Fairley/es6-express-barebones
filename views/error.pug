@@ -7,11 +7,11 @@ html
 
     body
         main(id="root" role="Application Error" aria-label="Application Error" aria-describedby="An application error notification")
-            h1= statusCode
-            hr
-            include components/navigation.pug
-            hr
-            p
-                | There has been an error.
-                br
-                | It would be a good idea to add a custom message depending on the type of error.
+            header
+                h1= statusCode
+                include components/navigation.pug
+            section(class="content")
+                p
+                    | There has been an error.
+                    br
+                    | It would be a good idea to add a custom message depending on the type of error.

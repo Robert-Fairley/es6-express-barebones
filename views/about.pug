@@ -7,10 +7,8 @@ html
 
     body
         main(id="root" role="Application" aria-label="Application" aria-describedby="Main application content")
-            h1= pageTitle
-            hr
-            include components/navigation.pug
-            hr
-            p
-                | This is the #{pageTitle} page.
-                | You should fill this page with content about your project, team, or yourself!
+            include components/header.pug
+            section(class="content")
+                p
+                    | This is the #{pageTitle} page.
+                    | You should fill this page with content about your project, team, or yourself!

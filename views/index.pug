@@ -7,11 +7,9 @@ html
     
     body
         main(id="root" role="Application" aria-label="Application" aria-describedby="Main application content")
-            h1= pageTitle
-            hr
-            include components/navigation.pug
-            hr
-            p
-                | This is our ES6 Express Barebones web application. It can render a different template
-                | for each route!
+            include components/header.pug
+            section(class="content")
+                p
+                    | This is your ES6 Express Barebones web application. It can render a different template
+                    | for each route!
             
