@@ -60,7 +60,7 @@ app.use(ErrorRoutes.e404);
  * and start the server. If there's an error starting up,
  * throw the error and stop the program.
  */
-app.listen(Config.PORT, Config.ADDR, err => {
+const server = app.listen(Config.PORT, Config.ADDR, err => {
     if (err) throw new Error(err);
 
     console.log(`\n${chalk.blueBright('* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *')}\n`);
@@ -71,3 +71,5 @@ app.listen(Config.PORT, Config.ADDR, err => {
     );
     console.log(`\n${chalk.blueBright('* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *')}\n`);
 });
+
+export default server;
