@@ -116,18 +116,18 @@ section.content {
 
 .counter button:active {
     outline: 0;
-    box-shadow: 2px  2px var(--dusk),
-                2px -2px var(--dusk),
-               -2px -2px var(--dusk),
-               -2px  2px var(--dusk);
+    box-shadow: 2px  2px 1px 0 var(--dusk),
+                2px -2px 1px 0 var(--dusk),
+               -2px -2px 1px 0 var(--dusk),
+               -2px  2px 1px 0 var(--dusk);
 }
 
 .counter button:focus {
     outline: 0;
-    box-shadow: 2px  2px var(--dusk),
-                2px -2px var(--dusk),
-               -2px -2px var(--dusk),
-               -2px  2px var(--dusk);
+    box-shadow: 2px  2px 1px 0px var(--dusk),
+                2px -2px 1px 0px var(--dusk),
+               -2px -2px 1px 0px var(--dusk),
+               -2px  2px 1px 0px var(--dusk);
 }
 
 @media screen and ( max-width: 678px) {

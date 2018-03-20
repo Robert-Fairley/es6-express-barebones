@@ -5,6 +5,7 @@
 
 ### Application
 server.js
+/public/app.js
 
 ### Configs
 /.vscode/

@@ -6,6 +6,6 @@
  */
 const Config = {
     APP_ROOT: document.querySelector('#root'),
-}
+};
 
 export default Config;
