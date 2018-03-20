@@ -78,6 +78,58 @@ section.content {
     padding: 1.5em;
 }
 
+.counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.counter .message {
+    font-size: 1.3em;
+}
+
+.counter .count {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.counter button {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 0.5em 1.5em;
+
+    background-color: var(--sky);
+
+    border: 2px solid var(--background);
+    border-radius: 6px;
+
+    transition: 200ms box-shadow ease;
+
+    will-change: box-shadow, background-color;
+}
+
+.container button:hover {
+    background-color: var(--darkerSky);
+}
+
+.counter button:active {
+    outline: 0;
+    box-shadow: 2px  2px var(--dusk),
+                2px -2px var(--dusk),
+               -2px -2px var(--dusk),
+               -2px  2px var(--dusk);
+}
+
+.counter button:focus {
+    outline: 0;
+    box-shadow: 2px  2px var(--dusk),
+                2px -2px var(--dusk),
+               -2px -2px var(--dusk),
+               -2px  2px var(--dusk);
+}
+
 @media screen and ( max-width: 678px) {
     :root {
         font-size: 0.8em;

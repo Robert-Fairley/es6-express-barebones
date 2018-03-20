@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm start",
+    "start": "node server.js",
+    "start:prod": "NODE_ENV=production node server.js",
     "start:dev": "NODE_ENV=development babel-node ./src/server/index.js",
     "test": "./node_modules/.bin/mocha --harmony --require babel-register",
+    "build:client": "./node_modules/.bin/webpack --config webpack.client.config.js --mode development",
     "build:server": "./node_modules/.bin/webpack --config webpack.server.config.js --mode development",
-    "clean:build": "echo \"Cleaning up build files.\n\" && rm server.js && echo \"Done\n\"",
+    "build:prod:client": "./node_modules/.bin/webpack --config webpack.client.config.js --mode production",
+    "build:prod:server": "./node_modules/.bin/webpack --config webpack.server.config.js --mode production",
+    "clean:build": "echo \"Cleaning up build files.\n\" && rm server.js && rm public/app.js && echo \"Done\n\"",
     "clean:full": "echo \"Cleaning build files and dependencies...\n\" && rm server.js && rm -rf node_modules && echo \"Done\n\""
   },
   "keywords": [],
