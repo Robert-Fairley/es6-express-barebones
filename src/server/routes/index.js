@@ -5,7 +5,7 @@
  * 
  * Form your handler methods here and reference them in the main server application.
  */
-import { log } from '../util';
+import { log } from '../logging';
 
  /**
   * @class Routes

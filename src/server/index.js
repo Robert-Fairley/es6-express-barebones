@@ -2,7 +2,7 @@ import express from 'express';  // Express Server framework
 import chalk from 'chalk';      // Coloured Console Messages
 import path from 'path';        // NodeJS Path Module
 import Config from './config';  // Global Config object
-import { log } from './util';   // Utility/helper functions
+import { log } from './logging';   // Utility/helper functions
 import {
     Routes,
     ErrorRoutes

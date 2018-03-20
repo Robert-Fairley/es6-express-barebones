@@ -4,7 +4,7 @@ import {
     requestMethod,
     requestProtocol,
     log
-} from '../src/server/util';
+} from '../src/server/logging';
 import { request } from 'http';
 
 describe('Utility/Helper functions', function() {

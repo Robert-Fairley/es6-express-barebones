@@ -1,8 +1,8 @@
 {
   "name": "es6-express-barebones",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A barebones NodeJS Express full stack web application in ES6 ",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "start:prod": "NODE_ENV=production node server.js",
@@ -15,9 +15,12 @@
     "clean:build": "echo \"Cleaning up build files.\n\" && rm server.js && rm public/app.js && echo \"Done\n\"",
     "clean:full": "echo \"Cleaning build files and dependencies...\n\" && rm server.js && rm -rf node_modules && echo \"Done\n\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Robert Fairley <rrafairley@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Robert-Fairley/es6-express-barebones"
+  },
   "dependencies": {
     "@babel/preset-env": "^7.0.0-beta.41",
     "chalk": "^2.3.2",
