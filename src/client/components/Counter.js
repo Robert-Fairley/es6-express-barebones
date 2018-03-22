@@ -27,6 +27,7 @@ class Counter extends Component
     increaseCount(event, _count)
     {
         this.state.count += 1;
+        _count.setAttribute('aria-describedby', `${this.state.count}`);
         _count.innerText = this.state.count;
     }
 
@@ -39,6 +40,7 @@ class Counter extends Component
     decreaseCount(event, _count)
     {
         this.state.count -= 1;
+        _count.setAttribute('aria-describedby', `${this.state.count}`);
         _count.innerText = this.state.count;
     }
 
@@ -61,6 +63,19 @@ class Counter extends Component
         count.classList.add('count');
         controls.classList.add('controls');
         message.classList.add('message');
+
+        container.setAttribute('aria-label', 'Counter');
+        container.setAttribute('role', 'Counter Widget');
+        count.setAttribute('aria-label', 'Count');
+        count.setAttribute('role', 'Count');
+        controls.setAttribute('aria-label', 'Counter Controls');
+        controls.setAttribute('role', 'Counter Controls');
+        message.setAttribute('aria-label', 'Greeting');
+        message.setAttribute('role', 'Counter Heading');
+        btnUp.setAttribute('aria-label', 'Increase Count');
+        btnUp.setAttribute('role', 'button');
+        btnDn.setAttribute('aria-label', 'Decrease Count');
+        btnDn.setAttribute('role', 'button');
 
         btnUp.innerText = '++';
         btnDn.innerText = '--';

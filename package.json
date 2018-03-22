@@ -4,16 +4,18 @@
   "description": "A barebones NodeJS Express full stack web application in ES6 ",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run start:prod",
     "start:prod": "NODE_ENV=production node server.js",
     "start:dev": "NODE_ENV=development babel-node ./src/server/index.js",
     "test": "./node_modules/.bin/mocha --harmony --require babel-register",
-    "build:client": "./node_modules/.bin/webpack --config webpack.client.config.js --mode development",
-    "build:server": "./node_modules/.bin/webpack --config webpack.server.config.js --mode development",
-    "build:prod:client": "./node_modules/.bin/webpack --config webpack.client.config.js --mode production",
-    "build:prod:server": "./node_modules/.bin/webpack --config webpack.server.config.js --mode production",
+    "build:all": "npm run build:client && npm run build:server",
+    "build:client": "NODE_ENV=development ./node_modules/.bin/webpack --config webpack.client.config.js --mode development",
+    "build:server": "NODE_ENV=development ./node_modules/.bin/webpack --config webpack.server.config.js --mode development",
+
+    "build:prod:client": "npm test && NODE_ENV=production ./node_modules/.bin/webpack --config webpack.client.config.js --mode production",
+    "build:prod:server": "npm test && NODE_ENV=production ./node_modules/.bin/webpack --config webpack.server.config.js --mode production",
     "clean:build": "echo \"Cleaning up build files.\n\" && rm server.js && rm public/app.js && echo \"Done\n\"",
-    "clean:full": "echo \"Cleaning build files and dependencies...\n\" && rm server.js && rm -rf node_modules && echo \"Done\n\""
+    "clean:full": "echo \"Cleaning build files and dependencies...\n\" && rm server.js && rm public/app.js && rm -rf node_modules && echo \"Done\n\""
   },
   "author": "Robert Fairley <rrafairley@gmail.com>",
   "license": "MIT",

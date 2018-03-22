@@ -16,11 +16,41 @@ npm install
 
 ## Build Server
 
+Development
 ```shell
 npm run build:server
 ```
 
-## Utility Scripts
+Production
+```shell
+npm run build:prod:server
+```
+
+## Build Client
+
+Development
+```shell
+npm run build:client
+```
+
+Production
+```shell
+npm run build:prod:client
+```
+
+## Build All
+
+Development
+```shell
+npm run build:all
+```
+
+Production
+```shell
+npm run build:prod:all
+```
+
+## Clean up Scripts
 Clean up builds
 ```shell
 npm run clean:build
