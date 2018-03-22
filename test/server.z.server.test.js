@@ -1,13 +1,15 @@
 import { expect } from 'chai';
+import chalk from 'chalk';
 import request from 'supertest';
 
+const category = chalk.bgBlueBright.white(' [ Server ] ');
 /**
  * This test checks for a response with the correct status code
  * per implemented route. If you add more routes to your application,
  * then you need to add more test cases to match.
  */
 
-describe('Server', function() {
+describe(`${category} Server Functions`, function() {
     var server;
     beforeEach(function() {
         server = null;

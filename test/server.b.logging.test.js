@@ -1,4 +1,5 @@
 import { expect, to, equal, be, a } from 'chai';
+import chalk from 'chalk';
 import {
     statusCode,
     requestMethod,
@@ -7,7 +8,9 @@ import {
 } from '../src/server/logging';
 import { request } from 'http';
 
-describe('Utility/Helper functions', function() {
+const category = chalk.bgBlueBright.white(' [ Server ] ');
+
+describe(`${category} Logging functions`, function() {
     it('statusCode()', function() {
         it('should return a styled string when given a number or string', function(done) {
             let s,n;

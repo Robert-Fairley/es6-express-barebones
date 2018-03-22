@@ -1,11 +1,13 @@
 import { expect, to, be, a, not } from 'chai';
+import chalk from 'chalk';
 const jsdom = require('jsdom');
 
 import Counter from '../src/client/components/Counter';
 
 const { JSDOM } = jsdom;
+const category  = chalk.bgBlueBright.white(' [ Client ] ');
 
-describe('Client - Counter Component', function() {
+describe(`${category} Counter Component`, function() {
     it('#constructor()', function() {
         it('should instantiate without error', function(done) {
 

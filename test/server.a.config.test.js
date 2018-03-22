@@ -1,7 +1,10 @@
 import { expect, to, be, a } from 'chai';
+import chalk from 'chalk';
 import Config from '../src/server/config';
 
-describe('Config Object Properties', function() {
+const category = chalk.bgBlueBright.white(' [ Server ] ');
+
+describe(`${category} Config Object Properties`, function() {
     it('PRODUCTION', function() {
         let productionMode = Config.PRODUCTION;
 

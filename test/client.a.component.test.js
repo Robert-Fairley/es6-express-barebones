@@ -1,7 +1,10 @@
 import { expect, to, be, a } from 'chai';
+import chalk from 'chalk';
 import Component from '../src/client/components/primitives/Component';
 
-describe('Client - Component Primitive', function() {
+const category = chalk.bgBlueBright.white(' [ Client ] ');
+
+describe(`${category} Component Primitive`, function() {
     it('#constructor()', function() {
         it('should be a class and intantiate without error', function(done) {
             expect(Component).to.be.a('function');
